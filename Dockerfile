@@ -10,7 +10,7 @@ RUN mkdir /config
 
 ADD ./etc/* /etc/
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x ./etc/entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 COPY ./etc/ca.crt /etc/ipsec.d/cacerts/ca.crt
