@@ -24,6 +24,6 @@ VOLUME /config
 # http://blogs.technet.com/b/rrasblog/archive/2006/06/14/which-ports-to-unblock-for-vpn-traffic-to-pass-through.aspx
 EXPOSE 500/udp 4500/udp
 
-RUN sudo echo 1 > /proc/sys/net/ipv4/ip_forward iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+RUN echo 1 > /proc/sys/net/ipv4/ip_forward iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 CMD /usr/bin/start-vpn
