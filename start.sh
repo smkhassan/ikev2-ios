@@ -258,7 +258,7 @@ conn roadwarrior
   auto=add
   compress=no
   type=tunnel
-  keyexchange=ike
+  keyexchange=ikev2
   fragmentation=yes
   forceencaps=yes
 
