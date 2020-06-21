@@ -12,7 +12,8 @@ ADD ./etc/* /etc/
 
 RUN chmod +x ./etc/entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./etc/entrypoint.sh"]
+
 COPY ./etc/ca.crt /etc/ipsec.d/cacerts/ca.crt
 
 ADD ./bin/* /usr/bin/
